@@ -1,0 +1,12 @@
+flowchart TD
+    A[User accesses the SPA page (GET request)] --> B[Server responds with the HTML, JavaScript, and CSS for the SPA]
+    B --> C[Browser loads the SPA (single-page app)]
+    C --> D[User interacts with the interface (e.g., typing a note)]
+    D --> E[User clicks "submit" to save the note]
+    E --> F[Browser sends an asynchronous POST request to the server (AJAX/Fetch)]
+    F --> G[Server processes the request and saves the new note]
+    G --> H[Server responds with the saved note data]
+    H --> I[Browser dynamically updates the page with the new note]
+
+    classDef action fill:#f9f,stroke:#333,stroke-width:2px;
+    class A,B,C,D,E,F,G,H,I action;
